@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serifs;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://img.freepik.com/premium-photo/urban-taxi-mobile-online-application-concept-toy-yellow-taxi-car-model-hand-holding-smart-phone-with-taxi-service-app-display_69064-1759.jpg?ga=GA1.1.573191439.1731762364&semt=ais_hybrid') no-repeat;
+    background-size: cover;
+    background-position: center ;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logo { 
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+.navigate a{
+   position: relative;
+   text-decoration: none;
+   color: white;
+   font-size: 1.3rem;
+   font-weight: 500;
+   margin-left: 40px;
+
+}
+.navigate a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition:  .5s;
+}
+.login-btn:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);  
+}
+.login-btn{
+    background: transparent;
+    height: 2.5rem;
+    width: 5.5rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    outline: none;
+    font-weight: 500;
+    font-size: 19px;
+    color: white;
+    cursor: pointer;
+    margin-left: 40px;
+    transition: 0.3s;
+}
+.login-btn:hover{
+    background-color: #fff;
+    color: #851ec9;
+}
+.wrap{
+    width: 400px;
+    height: 440px;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.61);
+    background: transparent;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.753);
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height 0.3s ease;
+}
+.wrap.active{
+    height: 520px;
+}
+.wrap.active-popup{
+    transform: scale(1);
+}
+.wrap .form-login{
+    width: 100%;
+    padding: 40px;
+}
+.wrap .form-login.login{
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+}
+.wrap.active .form-login.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+.wrap .form-login.Register{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+.wrap.active .form-login.Register{
+    transition:  transform .18s ease;
+    transform: translateX(0);
+}
+.form-login h2{
+    color: #851ec9;
+    font-size: 2rem;
+    text-align: center;
+   
+}
+.form-input {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #851ec9;
+    margin: 30px 0;
+}
+.form-input label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #851ec9;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.form-input input:focus~label,
+.form-input input:hover~label{
+    top: 5px;
+}
+ #mail{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2rem;
+    color: #851ec9;
+    line-height: 57px;
+}
+#close{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 45px;
+    width: 45px;
+    font-size: 1.7rem;
+    display: flex;justify-content: center;
+    align-items: center;
+    background-color: #851ec9;
+    color: #fff;
+    border-bottom-left-radius: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+#close:hover{
+    background-color: #fff;
+    color: #851ec9;
+}
+#user{
+     position: absolute;
+    right: 8px;
+    font-size: 1.2rem;
+    color: #851ec9;
+    line-height: 57px;
+}
+#pass{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2rem;
+    color: #851ec9;
+    line-height: 57px;
+}
+.form-input input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+   font-weight: 600;
+   color: #851ec9;
+   padding: 0 35px 0 5px;
+}
+.remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #851ec9;
+}
+.remember-forgot input {
+    margin-right: 4px;
+    color: #851ec9;
+}
+.remember-forgot a{
+    text-decoration: none;
+   color: #851ec9;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+button{
+    width: 100%;
+    height: 45px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-align: center;
+    background-color: #851ec9;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+button:hover{
+    background-color: #fff;
+    color: #851ec9;
+}
+.regiter{
+    font-size: 1em;
+    font-weight: 400;
+   text-align: center;
+   margin: 25px 0 10px;
+  
+}
+.regiter p a{
+    text-decoration: none;
+    color: #851ec9;
+    font-size: em;
+    font-weight: 500;
+}
+.regiter p a:hover{
+    text-decoration: underline;
+}
