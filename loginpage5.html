@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="loginpage5.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="./lion-head-logo-mascot-free.png" alt="">
+        <nav class="navigate">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contacts</a>
+            <a href="#">Services</a>
+            <button class="login-btn">Login</button> 
+        </nav> 
+    </header>
+    <main>
+        <span class="bg-animate"></span>
+        <span class="bg-animate2"></span>
+        <div class="form-box login animation" >
+            <h2 class="animation" style="--i:0;" >Login</h2>
+            <form action="#">
+                <div class="input-data animation "style="--i:1;" >
+                    <i class="fa-solid fa-user" id="user"></i>
+                    <input type="text" required>
+                    <label >Username</label>
+                </div>
+                <div class="input-data animation "style="--i:2;">
+                    <i class="fa-solid fa-key" id="pass" ></i>
+                    <input type="password" required>
+                    <label >password</label>
+                </div>
+                <div class="remember-forgot animation"style="--i:3;">
+                 <label>   <input type="checkbox" name="" id="">Remember me.</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+               <button class="btn-pop animation"style="--i:4;">Login</button>
+               <div class="register animation "style="--i:5;">
+                <p>Don't have an Account?<a href="#" class="register-link animation" >Register-here</a></p>
+               </div>
+            </form>
+        </div>
+        <div class="info-txt login animation" >
+            <h2 class="animation" style="--i:0;">Welcome Back!!!</h2>
+            <p class="animation" style="--i:1;" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis error corporis dolorum.</p>
+        </div>
+        <div class="form-box register" >
+            <h2 class="animation">Sign-Up</h2>
+            <form action="#">
+                <div class="input-data animation">
+                    <i class="fa-solid fa-user" id="user"></i>
+                    <input type="text" required>
+                    <label >Username</label>
+                </div>
+                <div class="input-data animation">
+                    <i class="fa-solid fa-envelope" id="email"></i>
+                    <input type="email" required>
+                    <label >Email-Id</label>
+                </div>
+                <div class="input-data animation">
+                    <i class="fa-solid fa-key" id="pass" ></i>
+                    <input type="password" required>
+                    <label >password</label>
+                </div>
+                <div class="remember-forgot animation">
+                 <label>   <input type="checkbox" name="" id="">Remember me.</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+               <button class="btn-pop animation">Sign-Up.</button>
+               <div class="login animation">
+                <p>Already have an Account?<a href="#"class="login-link animation" >Login</a></p>
+               </div>
+            </form>
+        </div>
+        <div class="info-txt register" >
+            <h2 class="animation">Welcome!!!</h2>
+            <p class="animation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis error corporis dolorum.</p>
+        </div>
+    </main>
+    <script src="loginpage5.js"></script>
+    <script src="https://kit.fontawesome.com/9d7016fa83.js" crossorigin="anonymous"></script>
+</body>
+</html>
